@@ -18,7 +18,7 @@ def user():
 @app.route('/users/<string:username>')
 def users(username):
     #return "<h1>Hello %s<h1>" % username
-    return render_template('user.html',uname=username)
+    return render_template('user.html',username=username)
 
     if __name__ =='__main__':
         app.run()

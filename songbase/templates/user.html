@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %} Users {% endblock %}
+
+{% block content %}
+
+    <h1>This is the user page</h1>
+      {# this is the comment for template#}
+      {% if username =="harry" %}
+    <h2>Hello Professor!</h2>
+      {% else %}
+    <h2>Hello student {{username}}</h2>
+      {% endif %}
+
+    <h2>The following is an image:</h2>
+    <img src = "{{url_for('static',filename = 'Img/Deathstroke.jpg')}}" alt="">
+
+  {% endblock %}
