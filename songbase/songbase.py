@@ -11,6 +11,17 @@ if __name__ == '__main__':
 
 @app.route("/user")
 def user():
+
+    return render_template("index.html")
+
+@app.route("/form-demo")
+def form_demo():
+    first_name = request.args.get('first_name')
+    return first_name
+
+
+@app.route("/form-basics")
+def form_basics():
     #return "this is the page for users"
     return render_template("index.html")
 
